@@ -29,6 +29,7 @@ function generatePassword() {
   var confirmNumeric = window.confirm("Do you want numbers?")
   var confirmSpecial = window.confirm("Do you want special characters?")
 
+<<<<<<< HEAD
   var useChar = ["a","b","c","1","2","3"]
 
   var randomPassword =""
@@ -39,6 +40,17 @@ function generatePassword() {
   return randomPassword;
 };
 
+=======
+  var useChar = []
+  var randomPassword ="password"
+  //for (var i = 0; i < length; i++) {
+   // randomPassword = randomPassword + useChar[Math.floor(Math.random() * useChar.length)];
+    //console.log(randomPassword);
+  //}
+  return randomPassword;
+};
+
+>>>>>>> 33509cde1384de2e5d7ad006a3462b3b8ad986d3
 
 
 // Write password to the #password input
