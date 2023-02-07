@@ -28,11 +28,33 @@ function generatePassword() {
   var confirmUpper = window.confirm("Do you want uppercase letters?")
   var confirmNumeric = window.confirm("Do you want numbers?")
   var confirmSpecial = window.confirm("Do you want special characters?")
+  
+  while (!confirmLower && !confirmUpper && !confirmNumeric && !confirmSpecial) {
+    alert ("Need to choose at least one parameter");
+    var confirmLower = window.confirm("Do you want lowercase letters?")
+    var confirmUpper = window.confirm("Do you want uppercase letters?")
+    var confirmNumeric = window.confirm("Do you want numbers?")
+    var confirmSpecial = window.confirm("Do you want special characters?")
+  }
 
-<<<<<<< HEAD
-  var useChar = ["a","b","c","1","2","3"]
+  var useChar = []
+
+  if(confirmLower) {
+   useChar = useChar.concat(lower)
+  };
+  if(confirmUpper) {
+    useChar = useChar.concat(upper)
+   };
+  if(confirmNumeric) {
+    useChar = useChar.concat(numeric)
+   };
+  if(confirmSpecial) {
+    useChar = useChar.concat(special)
+   };
+   
 
   var randomPassword =""
+
   for (var i = 0; i < length; i++) {
     randomPassword = randomPassword + useChar[Math.floor(Math.random() * useChar.length)];
     console.log(randomPassword);
@@ -40,17 +62,6 @@ function generatePassword() {
   return randomPassword;
 };
 
-=======
-  var useChar = []
-  var randomPassword ="password"
-  //for (var i = 0; i < length; i++) {
-   // randomPassword = randomPassword + useChar[Math.floor(Math.random() * useChar.length)];
-    //console.log(randomPassword);
-  //}
-  return randomPassword;
-};
-
->>>>>>> 33509cde1384de2e5d7ad006a3462b3b8ad986d3
 
 
 // Write password to the #password input
